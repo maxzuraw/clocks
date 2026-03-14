@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cpx08jw5i8bf7"]
+
+[ext_resource type="Texture2D" uid="uid://bkh2c57vt0es4" path="res://icons/menu/tarcza_zegara.png" id="1_q7at5"]
+[ext_resource type="Script" uid="uid://be00uljoykhga" path="res://sceny/second_pivot.gd" id="2_hi0kr"]
+[ext_resource type="Script" uid="uid://bhmd2if815ceb" path="res://sceny/minute_hand.gd" id="3_lp8pi"]
+[ext_resource type="Script" uid="uid://biw5qhoobmk5a" path="res://sceny/hour_hand.gd" id="4_2c2sg"]
+
+[node name="DefaultClock" type="Node2D" unique_id=390263747]
+
+[node name="Tarcza" type="Sprite2D" parent="." unique_id=1962189353]
+position = Vector2(125, 125)
+texture = ExtResource("1_q7at5")
+
+[node name="SecondHand" type="Node2D" parent="." unique_id=1058888466]
+position = Vector2(126, 124)
+script = ExtResource("2_hi0kr")
+
+[node name="MinuteHand" type="Node2D" parent="." unique_id=251696941]
+position = Vector2(126, 124)
+script = ExtResource("3_lp8pi")
+
+[node name="HourHand" type="Node2D" parent="." unique_id=778863830]
+position = Vector2(126, 124)
+script = ExtResource("4_2c2sg")

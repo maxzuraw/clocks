@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://yuaow0ubryjf" path="res://menu/menu_bar.gd" id="1_1wwd3"]
 [ext_resource type="PackedScene" uid="uid://dhgjpmy4cy2yp" path="res://menu/show_hide_menu_button.tscn" id="2_xb4vu"]
+[ext_resource type="PackedScene" uid="uid://cpx08jw5i8bf7" path="res://sceny/default_clock.tscn" id="3_xb4vu"]
 
-[node name="Node2D" type="Node2D" unique_id=828434851]
+[node name="ClocksMainPage" type="Node2D" unique_id=828434851]
+
+[node name="DefaultClock" parent="." unique_id=390263747 instance=ExtResource("3_xb4vu")]
 
 [node name="MenuBar" type="MenuBar" parent="." unique_id=887478961]
+visible = false
 offset_right = 174.0
 offset_bottom = 40.0
 script = ExtResource("1_1wwd3")
