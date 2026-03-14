@@ -4,15 +4,13 @@
 [ext_resource type="Script" uid="uid://t1oa56hcjbvj" path="res://menu/ShowHideMenuButton.gd" id="2_vn7lf"]
 [ext_resource type="Texture2D" uid="uid://byqni2qeo8343" path="res://icons/menu/hidden.png" id="3_2pkod"]
 
-[node name="ShowHideMenu" type="Node2D" unique_id=560448337]
-
-[node name="Button" type="Button" parent="." unique_id=1821122979]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ShowHideMenu" type="Button" unique_id=1892138017]
+offset_right = 46.0
+offset_bottom = 34.0
 toggle_mode = true
-icon = ExtResource("1_lypkd")
+icon = ExtResource("3_2pkod")
 script = ExtResource("2_vn7lf")
 visibleIcon = ExtResource("1_lypkd")
 hiddenIcon = ExtResource("3_2pkod")
 
-[connection signal="toggled" from="Button" to="Button" method="_on_toggled"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]
