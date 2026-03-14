@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b7u5xrqgimfj0"]
+
+[ext_resource type="PackedScene" uid="uid://dhgjpmy4cy2yp" path="res://menu/show_hide_menu_button.tscn" id="1_mx1rd"]
+
+[node name="Node2D" type="Node2D" unique_id=828434851]
+
+[node name="MenuBar" type="MenuBar" parent="." unique_id=887478961]
+offset_right = 174.0
+offset_bottom = 40.0
+
+[node name="SettingsButton" type="MenuButton" parent="MenuBar" unique_id=34994307]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Settings"
+item_count = 2
+popup/item_0/text = "Test"
+popup/item_0/id = 0
+popup/item_1/text = "Test 2"
+popup/item_1/id = 1
+
+[node name="HelpButton" type="MenuButton" parent="MenuBar" unique_id=613364730]
+layout_mode = 0
+offset_left = 75.0
+offset_right = 136.0
+offset_bottom = 31.0
+text = "Help
+"
+item_count = 1
+popup/item_0/text = "About"
+popup/item_0/id = 0
+
+[node name="ShowHideMenu" parent="." unique_id=560448337 instance=ExtResource("1_mx1rd")]
+position = Vector2(209, 0)
