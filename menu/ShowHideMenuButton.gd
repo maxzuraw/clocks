@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_toggled(toggled_on: bool) -> void:
-	print(toggled_on)
 	if toggled_on:
 		icon = visibleIcon
 	elif !toggled_on:
