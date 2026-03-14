@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://be00uljoykhga" path="res://sceny/second_pivot.gd" id="2_hi0kr"]
 [ext_resource type="Script" uid="uid://bhmd2if815ceb" path="res://sceny/minute_hand.gd" id="3_lp8pi"]
 [ext_resource type="Script" uid="uid://cpsh5nj7gkiod" path="res://sceny/location_label.gd" id="3_tmi14"]
+[ext_resource type="Script" uid="uid://cgpdjcsv48j85" path="res://sceny/digital_time.gd" id="3_v4bew"]
 [ext_resource type="Script" uid="uid://biw5qhoobmk5a" path="res://sceny/hour_hand.gd" id="4_2c2sg"]
 
 [node name="DefaultClock" type="Node2D" unique_id=390263747]
@@ -38,4 +39,17 @@ script = ExtResource("4_2c2sg")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="HourHand" unique_id=1228529262]
 
+[node name="DigitalTime" type="Label" parent="." unique_id=2076064011]
+offset_left = 94.0
+offset_top = 202.0
+offset_right = 161.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(0.40784314, 0.52156866, 0.81960785, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "00:00:00"
+horizontal_alignment = 1
+script = ExtResource("3_v4bew")
+
+[connection signal="time_changed" from="HourHand" to="DigitalTime" method="_on_hour_hand_time_changed"]
 [connection signal="request_completed" from="HourHand/HTTPRequest" to="HourHand" method="_on_http_request_request_completed"]

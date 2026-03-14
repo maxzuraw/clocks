@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var http: HTTPRequest = $HTTPRequest
+signal time_changed(hour, minute, second)
 
 var hand_length := 70.0
 var offset: int
@@ -21,6 +22,7 @@ func _process(delta: float) -> void:
 	var hour: int = dt.hour
 	var minute: int = dt.minute
 	var second: int = dt.second
+	time_changed.emit(hour, minute, second)
 	rotation_degrees = (hour % 12) * 30.0 + minute * 0.5
 	queue_redraw()
 	
