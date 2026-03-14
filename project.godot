@@ -13,12 +13,13 @@ config_version=5
 config/name="Clocks"
 run/main_scene="uid://b7u5xrqgimfj0"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://bsiihuu67cggl"
 
 [display]
 
 window/size/viewport_width=250
-window/size/viewport_height=250
+window/size/viewport_height=750
+window/size/resizable=false
 
 [physics]
 
