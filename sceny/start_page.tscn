@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://yuaow0ubryjf" path="res://menu/menu_bar.gd" id="1_1wwd3"]
 [ext_resource type="PackedScene" uid="uid://dhgjpmy4cy2yp" path="res://menu/show_hide_menu_button.tscn" id="2_xb4vu"]
 [ext_resource type="PackedScene" uid="uid://cpx08jw5i8bf7" path="res://sceny/default_clock.tscn" id="3_xb4vu"]
+[ext_resource type="Script" uid="uid://wvm2ov13twph" path="res://sceny/toggle_always_on_top_button.gd" id="4_ar7lk"]
+[ext_resource type="Texture2D" uid="uid://dvg841dhygb77" path="res://icons/on_top.svg" id="5_u2xb5"]
+[ext_resource type="Texture2D" uid="uid://15n4jm8fpbxt" path="res://icons/on_bottom.png" id="6_pwf3u"]
 
 [node name="ClocksMainPage" type="Node2D" unique_id=828434851]
 
@@ -56,4 +59,16 @@ offset = -4
 location = "Nowy Jork"
 zone = "America/New_York"
 
+[node name="ToggleAlwaysOnTopButton" type="Button" parent="." unique_id=546265119]
+offset_left = 1.0
+offset_top = 717.0
+offset_right = 33.0
+offset_bottom = 749.0
+toggle_mode = true
+icon = ExtResource("6_pwf3u")
+script = ExtResource("4_ar7lk")
+onTopIcon = ExtResource("5_u2xb5")
+onBottomIcon = ExtResource("6_pwf3u")
+
 [connection signal="toggled" from="ShowHideMenu" to="MenuBar" method="_on_show_hide_menu_toggled"]
+[connection signal="toggled" from="ToggleAlwaysOnTopButton" to="ToggleAlwaysOnTopButton" method="_on_toggled"]
